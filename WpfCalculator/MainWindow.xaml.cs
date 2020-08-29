@@ -1,17 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace WpfCalculator
 {
@@ -21,7 +9,7 @@ namespace WpfCalculator
     public partial class MainWindow : Window
     {
         string zero = "0";
-        string one = "1";
+        public string one = "1";
         string two = "2";
         string three = "3";
         string four = "4";
@@ -32,24 +20,25 @@ namespace WpfCalculator
         string nine = "9";
         int sum = 0;
         bool isAddition = false;
-       
+
         public MainWindow()
         {
             InitializeComponent();
         }
         private void Click_Zero(object sender, RoutedEventArgs e)
         {
+           
             textBox.Text += zero;
             sum += Convert.ToInt32(textBox.Text);
-
+           
 
         }
         private void Click_One(object sender, RoutedEventArgs e)
         {
-
-            textBox.Text += one;
+            
+            textBox.Text += BtnOne.Content;
             sum += Convert.ToInt32(textBox.Text);
-
+            
         }
         private void Click_Two(object sender, RoutedEventArgs e)
         {
@@ -109,7 +98,12 @@ namespace WpfCalculator
         {
 
             textBox.Text = sum.ToString();
-            //sum = 0;
+          
+        }
+        private void Click_Del(object sender, RoutedEventArgs e)
+        {
+            sum = 0;
+            textBox.Text = "";
         }
     }
 }
