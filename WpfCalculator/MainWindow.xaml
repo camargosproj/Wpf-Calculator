@@ -39,9 +39,9 @@
         <Button Content="0" Grid.Column="2" Grid.Row="5" FontSize="45" Click="Click_Zero"/>
         <Button Content="=" Grid.Column="3" Grid.Row="5" FontSize="45" Click="Click_Equal"/>
         <Button Content="+" Grid.Column="4" Grid.Row="2" FontSize="45" Click="Click_add"/>
-        <Button Content="-" Grid.Column="4" Grid.Row="3" FontSize="45" Click="Click_Equal"/>
-        <Button Content="*" Grid.Column="4" Grid.Row="4" FontSize="45" Click="Click_Equal"/>
-        <Button Content="/" Grid.Column="4" Grid.Row="5" FontSize="45" Click="Click_Equal"/>
+        <Button Content="-" Grid.Column="4" Grid.Row="3" FontSize="45" Click="Click_Sub"/>
+        <Button Content="*" Grid.Column="4" Grid.Row="4" FontSize="45" Click="Click_Mul"/>
+        <Button Content="/" Grid.Column="4" Grid.Row="5" FontSize="45" Click="Click_Div"/>
 
 
 
