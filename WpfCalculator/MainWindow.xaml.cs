@@ -38,7 +38,7 @@ namespace WpfCalculator
         private void Click_One(object sender, RoutedEventArgs e)
         {
             
-            textBox.Text += one;
+            textBox.Text += one; // Concataneting a string 
         
 
         }
@@ -87,7 +87,7 @@ namespace WpfCalculator
         }
         private void Click_add(object sender, RoutedEventArgs e)
         {
-            sum += Convert.ToDouble(textBox.Text);
+            sum += Convert.ToDouble(textBox.Text); // Need to store the value converted in the variable called sum  
             textBox.Text = "";
             isAddition = true;
         } 
@@ -112,7 +112,7 @@ namespace WpfCalculator
         private void Click_Equal(object sender, RoutedEventArgs e)
         {
 
-
+            // Checking when the event is triggered to get the proper operation
             if (isAddition == true)
             {
                 sum += Convert.ToDouble(textBox.Text);
@@ -134,14 +134,24 @@ namespace WpfCalculator
             }
             result = sum;
             textBox.Text = result.ToString();
-            sum = 0;
-            
+            Reset();
 
         }
+
+        private void Reset()
+        {
+            sum = 0;
+            isAddition = false;
+            isSubtraction = false;
+            isMultiplication = false;
+            isDivision = false;
+        }
+
         private void Click_Del(object sender, RoutedEventArgs e)
         {
             sum = 0;
             textBox.Text = "";
         }
+        
     }
 }
